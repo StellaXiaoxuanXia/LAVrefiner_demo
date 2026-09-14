@@ -1,6 +1,6 @@
 # Reproducing the LAVrefiner heritability analysis
 
-This package provides a subset of the paper's heritability analysis using variants from variable number tandem repeat (VNTR) regions on chromosomes 1–10 and expression phenotypes on chromosome 1. It includes the input data, LAVrefiner source, analysis scripts, and PLINK/GCTA executables needed to reproduce this example.
+Please Download the complete reproduction package from Releases, extract it, and follow the instructions below. Run all commands from the extracted package directory. This package provides a subset of the paper's heritability analysis using variants from variable number tandem repeat (VNTR) regions on chromosomes 1–10 and expression phenotypes on chromosome 1. It includes the input data, LAVrefiner source, analysis scripts, and PLINK/GCTA executables needed to reproduce this example.
 
 The input variants are provided in `inputs/LAV_VNTR.chr1_10.vcf.gz`.
 
