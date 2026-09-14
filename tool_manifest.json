@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "package": "demo_resources_chr1_10_linux_x86_64",
+  "paths_relative_to": "package root",
+  "required_binary_platform": "Linux x86-64",
+  "tools": {
+    "plink": {
+      "path": "bin/plink",
+      "version": "v1.9.0-b.7.7 64-bit (22 Oct 2024)",
+      "sha256": "013114acc9db095b78588ee25bae523419db4965b04c111c1c0e2fc2b43409d5",
+      "source": "package-local binary",
+      "version_evidence": "Original release version record; bundled binary SHA256 verified."
+    },
+    "gcta": {
+      "path": "bin/gcta64",
+      "version": "v1.94.4 Linux",
+      "sha256": "b2a45df90de83c52364a44287c97bc53dde376e2622149b560a5fe23bea8efbb",
+      "source": "package-local binary",
+      "version_evidence": "Original release version record; bundled binary SHA256 verified."
+    },
+    "lavrefiner": {
+      "version": "0.3.1",
+      "source": "package-local source installation",
+      "source_path": "LAVrefiner",
+      "install_commands_from_package_root": [
+        "cd LAVrefiner",
+        "pip install .",
+        "cd .."
+      ],
+      "command": "lavrefiner",
+      "runtime_source": "activated Conda environment",
+      "version_sources": [
+        "LAVrefiner/setup.py",
+        "LAVrefiner/LAVrefiner/cli.py"
+      ]
+    },
+    "mafft": {
+      "source": "activated Conda environment",
+      "command": "mafft",
+      "install_command": "conda install conda-forge::mafft",
+      "reference_version": "7.526"
+    }
+  },
+  "analysis_design": {
+    "variant_chromosomes": "chr1-10",
+    "phenotype_chromosome": "chr1",
+    "cn_window_bp": 1000000,
+    "remove_rlav_nlav_when_max_r2_gt": 0.05,
+    "grm_standardization_ddof": 1
+  },
+  "checksum_policy": {
+    "file": "checksums.sha256",
+    "include": [
+      "bin",
+      "inputs",
+      "phenotype",
+      "LAVrefiner",
+      "pipeline",
+      "run_pipeline.py",
+      "README.md",
+      "EXPECTED_OUTPUT.md",
+      "tool_manifest.json"
+    ],
+    "exclude": [
+      "checksums.sha256",
+      "work/",
+      "results/",
+      "**/__pycache__/",
+      "*.pyc",
+      ".DS_Store",
+      "*.memory_index.v2.pkl",
+      "temporary files",
+      "private sample ID mappings"
+    ]
+  },
+  "bundled_tool_validation": {
+    "version_commands_required": false,
+    "policy": "Use package-local binaries and verify release checksums and executable permissions."
+  }
+}
