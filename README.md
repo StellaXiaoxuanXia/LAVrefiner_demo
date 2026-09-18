@@ -1,6 +1,8 @@
-# Reproducing the LAVrefiner heritability analysis
+# LAVrefiner software testing example
 
-Please download the complete reproduction package from [Releases](https://github.com/StellaXiaoxuanXia/Reproducing-the-LAVrefiner-heritability-analysis/releases/tag/v1), extract it, and follow the instructions below. Run all commands from the extracted package directory. This package provides a subset of the paper's heritability analysis using variants from variable number tandem repeat (VNTR) regions on chromosomes 1–10 and expression phenotypes on chromosome 1. It includes the input data, LAVrefiner source, analysis scripts, and PLINK/GCTA executables needed to reproduce this example.
+Please download the complete test package from [Releases](https://github.com/StellaXiaoxuanXia/LAVrefiner_demo/releases/tag/v1), extract it, and follow the instructions below. Run all commands from the extracted package directory.
+
+This package provides example data and scripts for testing LAVrefiner and its downstream heritability estimation workflow. It uses variants from variable number tandem repeat (VNTR) regions on chromosomes 1–10 and expression phenotypes on chromosome 1. The package includes input data, LAVrefiner source code, analysis scripts, and PLINK/GCTA executables. 
 
 The input variants are provided in `inputs/LAV_VNTR.chr1_10.vcf.gz`.
 
